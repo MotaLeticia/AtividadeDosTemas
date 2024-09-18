@@ -1,0 +1,27 @@
+# Inicializa uma lista vazia para armazenar os números pares
+numeros_pares = []
+
+# Loop infinito para receber entradas do usuário
+while True:
+    try:
+        numero = int(input("Digite um número (ou 0 para calcular): "))
+        
+        if numero == 0:
+            break  # Sai do loop se o usuário digitar 0
+        elif numero % 2 == 0:
+            numeros_pares.append(numero)  # Adiciona números pares à lista
+        else:
+            print("Esse número não é par. Tente novamente.")
+    except ValueError:
+        print("Por favor, digite um número inteiro válido.")
+
+# Calcula a soma, quantidade e média dos números pares
+soma_dos_pares = sum(numeros_pares)
+quantidade_de_pares = len(numeros_pares)
+media_dos_pares = soma_dos_pares / quantidade_de_pares
+
+# Exibe os resultados
+print("Números pares digitados:", numeros_pares)
+print("Soma dos pares:", soma_dos_pares)
+print("Quantidade de pares:", quantidade_de_pares)
+print("Média dos pares:", media_dos_pares)
